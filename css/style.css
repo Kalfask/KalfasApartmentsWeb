@@ -1,0 +1,247 @@
+
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  background-color: #ffffff;
+  color: #2980b9;
+  font-weight: 800;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+/* Language switch buttons */
+.language-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.language-switch button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-switch button:hover,
+.language-switch button:focus {
+  background-color: white;
+  color: #2c3e50;
+  outline: none;
+}
+
+/* Container για slider + description δίπλα δίπλα */
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.slider {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nav button {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.5rem;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.nav button:last-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.nav button:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.description {
+  width: 55%;
+  padding: 2rem 2.5rem;
+  box-sizing: border-box;
+  background-color: #fefefe;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.description h2 {
+  margin-top: 0;
+  color: #2980b9;
+}
+
+/* Περισσότερες πληροφορίες κάτω από container */
+    .more-info {
+      max-width: 900px;
+      margin: 1rem auto 3rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem 2.5rem;
+      color: #333;
+    }
+    .more-info h2 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+   
+
+    .more-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.more-info ul li {
+  background: #2980b9;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(41, 128, 185, 0.4);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.more-info ul li:hover {
+  background: #1c5980;
+  cursor: default;
+}
+
+.more-info blockquote {
+  background-color: #eaf4ff;
+  border-left: 5px solid #2980b9;
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  font-style: italic;
+  color: #333;
+  border-radius: 5px;
+}
+
+.book-button {
+  display: inline-block;
+  background-color: #2980b9;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.book-button:hover {
+  background-color: #1a5a8a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem;
+  }
+  .slider, .description {
+    width: 100%;
+  }
+  .slider {
+    height: 250px;
+    border-radius: 12px 12px 0 0;
+  }
+  .description {
+    border-radius: 0 0 12px 12px;
+  }
+}
