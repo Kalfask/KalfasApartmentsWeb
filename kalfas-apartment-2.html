@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kalfas Apartment 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  background-color: #ffffff;
+  color: #2980b9;
+  font-weight: 800;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+
+    /* Container για slider + description δίπλα δίπλα */
+    .container {
+      display: flex;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      gap: 2rem;
+    }
+    .slider {
+      width: 45%;
+      position: relative;
+      overflow: hidden;
+      height: 350px;
+      border-radius: 12px 0 0 12px;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 0;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .nav button {
+      pointer-events: all;
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      color: white;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+      font-size: 1.5rem;
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+    .nav button:last-child {
+      border-radius: 5px 0 0 5px;
+    }
+    .nav button:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .description {
+      width: 55%;
+      padding: 2rem 2.5rem;
+      box-sizing: border-box;
+      background-color: #fefefe;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .description h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-weight: 700;
+    }
+    .description p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Περισσότερες πληροφορίες κάτω από container */
+    .more-info {
+      max-width: 900px;
+      margin: 1rem auto 3rem auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem 2.5rem;
+      color: #333;
+    }
+    .more-info h2 {
+      color: #2c3e50;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+   
+
+    .more-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.more-info ul li {
+  background: #2980b9;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(41, 128, 185, 0.4);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.more-info ul li:hover {
+  background: #1c5980;
+  cursor: default;
+}
+
+
+    /* Σχόλια σε κουτάκια */
+    .more-info blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 5px solid #2980b9;
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      background-color: #e7f0fa;
+      border-radius: 8px;
+      box-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+      line-height: 1.4;
+    }
+
+    .book-button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgba(41, 128, 185, 0.6);
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    .book-button:hover {
+      background-color: #1c5980;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        max-width: 90vw;
+      }
+      .slider, .description {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        box-shadow: none;
+        padding: 0;
+      }
+      .description {
+        padding: 1.5rem 1rem;
+      }
+      .more-info {
+        max-width: 90vw;
+        padding: 1.5rem 1rem;
+      }
+      .nav button {
+        padding: 0.5rem 0.8rem;
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+        <div class="logo">K2</div>
+        <h1>Kalfas Apartment 2</h1>
+         <p>Nea Michaniona, Greece</p>
+    </div>
+   
+  </header>
+
+  <div class="container">
+    <div class="slider">
+      <div class="slides">
+        <img src="apartment2images/IMG_4895.JPEG" alt="Kalfas Apartment 2 - Image 1" />
+        <img src="apartment2images/IMG_4822.JPEG" alt="Kalfas Apartment 2 - Image 2" />
+        <img src="apartment2images/IMG_4825.JPEG" alt="Kalfas Apartment 2 - Image 3" />
+        <img src="apartment2images/IMG_4827.JPEG" alt="Kalfas Apartment 2 - Image 4" />
+        <img src="apartment2images/IMG_4828.JPEG" alt="Kalfas Apartment 2 - Image 5" />
+        <img src="apartment2images/IMG_4842.JPEG" alt="Kalfas Apartment 2 - Image 6" />
+        <img src="apartment2images/IMG_4847.JPEG" alt="Kalfas Apartment 2 - Image 7" />
+        <img src="apartment2images/IMG_4869.JPEG" alt="Kalfas Apartment 2 - Image 8" />
+        <img src="apartment2images/IMG_4870.JPEG" alt="Kalfas Apartment 2 - Image 9" />
+        <img src="apartment2images/IMG_4877.JPEG" alt="Kalfas Apartment 2 - Image 10" />
+        <img src="apartment2images/IMG_4878.JPEG" alt="Kalfas Apartment 2 - Image 11" />
+        <img src="apartment2images/IMG_4884.JPEG" alt="Kalfas Apartment 2 - Image 12" />
+        <img src="apartment2images/IMG_4891.JPEG" alt="Kalfas Apartment 2 - Image 13" />
+        <img src="apartment2images/IMG_4921.JPEG" alt="Kalfas Apartment 2 - Image 14" />
+        <img src="apartment2images/IMG_4816.JPEG" alt="Kalfas Apartment 2 - Image 15" />
+        <img src="apartment2images/IMG_5034.JPEG" alt="Kalfas Apartment 2 - Image 16" />
+        <img src="apartment2images/IMG_5041.JPEG" alt="Kalfas Apartment 2 - Image 17" />
+        <img src="apartment2images/IMG_5042.JPEG" alt="Kalfas Apartment 2 - Image 18" />
+      </div>
+      <div class="nav">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="description">
+      <h2>About Kalfas Apartment 2</h2>
+      <p>
+        Experience the comfort and convenience of Kalfas Apartment 2, located in the heart of Nea Michaniona. This modern apartment is perfect for families or groups, offering spacious living areas and a fully equipped kitchen.
+      </p>
+      <p>
+        Enjoy easy access to local attractions, beautiful beaches, and vibrant nightlife. Whether you're here for relaxation or adventure, Kalfas Apartment 2 is your ideal home away from home.
+      </p>
+    </div>
+  </div>
+
+  <div class="more-info">
+    <h2>Services</h2>
+    <ul>
+      <li>Free Wi-Fi</li>
+      <li>Air Conditioning</li>
+      <li>Fully Equipped Kitchen</li>
+      <li>Parking Available</li>
+      <li>24/7 Customer Support</li>
+      <li>1 Bedroom and Living room</li>
+      <li>Bathroom and Kitchen</li>
+      
+      <li>TV</li>
+      
+      <li>Refrigerator</li>
+      <li>Microwave</li>
+     
+      <li>Hair Dryer</li>
+    </ul>
+
+    <h2>Guest Reviews</h2>
+    <blockquote>“When I entered the house I was speechless!!!! It was much more perfect than I expected!!! It was like a normal house, it lacked nothing!!! I highly recommend it to everyone without any hesitation!!!! Congratulations to the owners!!!”</blockquote>
+    <blockquote>“Perfect location, in the center, next to shops, taverns, the sea, with parking. Clean, cozy, well maintained house. The host was very kind and attentive. We will definitely return!!”</blockquote>
+    <blockquote>“Everything was perfect, the apartment is spacious, clean, very well maintained and nicely decorated. The owner is very friendly and hospitable. I will definitely return!!”</blockquote>
+
+    <a href="https://www.booking.com/hotel/gr/kalfas-apartment-2.en.html" class="book-button" target="_blank" rel="noopener noreferrer">Book Now</a>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = slides.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentIndex = images.length - 1;
+      } else if (index >= images.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      const offset = -currentIndex * 100;
+      slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    // Auto-slide every 5 seconds (optional)
+    setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
