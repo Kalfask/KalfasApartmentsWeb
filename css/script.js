@@ -19,9 +19,5 @@ function prevSlide() {
 
 // Language switch example: redirects to URL with language param or page (dummy)
 function setLanguage(lang) {
-  if (lang === 'en') {
-     window.location.href = 'kalfas-apartment-2-en.html';  
-  } else if (lang === 'gr') {
-     window.location.href = 'kalfas-apartment-2-gr.html'; 
-  }
+    window.location.href = window.location.pathname.replace(/-(en|gr)\.html$/, `-${lang}.html`);
 }
