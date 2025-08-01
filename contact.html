@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kalfas Apartment</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      gap: 2rem;
+    }
+
+    .contact-info, .contact-map {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-info h2 {
+      color: #2980b9;
+    }
+
+    .contact-info p {
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .maps-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+     <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="kalfas-apartment-en.html">Kalfas Apartment</a></li>
+    <li><a href="kalfas-apartment-2-en.html">Kalfas Apartment 2</a></li>
+    <li><a href="local-guide.html">Local Guide</a></li>   
+    <li id ="selected"><a href="contact.html">Contact</a></li>
+    
+  </ul>
+</nav>
+  <header>
+     <div class="logo-title">
+      <div class="logo">
+        <img src="logo/ChatGPT Image Jul 31, 2025, 10_11_53 PM.png" alt="Kalfas Logo">
+      </div>
+      <div>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Phone</h2>
+      <p>+30 698 381 5558</p>
+      <p>+30 697 677 3887</p>
+
+      <h2>Email</h2>
+      <p>kalfas1234@hotmail.com</p>
+
+      <h2>Location</h2>
+      <p>Kalfas Apartment: Alexandrou 28, Nea Michaniona, Greece</p>
+      <p>Kalfas Apartment 2: Pellas, Nea Michaniona, Greece</p>
+    </div>
+
+    <div class="contact-map maps-wrapper">
+      <iframe
+        src="https://www.google.com/maps?q=Alexandrou+28,+Nea+Michaniona,+Greece&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12141.305983546967!2d22.8545666!3d40.4680414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a81728fb616a8d%3A0x48878ccf9065e384!2zzqDOrc67zrvOsc-CLCDOnM63z4fOsc69zrnPjs69zrEgNTcwIDA0!5e0!3m2!1sel!2sgr!4v1754071613091!5m2!1sel!2sgr"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Kalfas Apartments. All rights reserved. | <a href="mailto:kalfas1234@hotmail.com">Email Us</a>
+  </footer>
+</body>
+
+</html>
