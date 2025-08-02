@@ -21,3 +21,21 @@ function prevSlide() {
 function setLanguage(lang) {
     window.location.href = window.location.pathname.replace(/-(en|gr)\.html$/, `-${lang}.html`);
 }
+
+
+  const hamburger = document.getElementById("nav-hamburger");
+const navMenu = document.querySelector(".navbar ul");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+
+  // Εναλλαγή συμβόλου
+  if (navMenu.classList.contains("show")) {
+    hamburger.innerHTML = '&times;'; // ✕
+    hamburger.style.color = 'white'; 
+  } else {
+    hamburger.innerHTML = '&#9776;'; // ☰
+  }
+});
+
+
