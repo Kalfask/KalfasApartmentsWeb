@@ -23,18 +23,18 @@ function setLanguage(lang) {
 }
 
 
-  const hamburger = document.getElementById("nav-hamburger");
-const navMenu = document.querySelector(".navbar ul");
+const hamburger = document.querySelector("#nav-hamburger .hamburger");
+const navMenu = document.getElementById("nav-links");
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("show");
 
-  // Εναλλαγή συμβόλου
   if (navMenu.classList.contains("show")) {
-    hamburger.innerHTML = '&times;'; // ✕
-    hamburger.style.color = 'white'; 
+    hamburger.innerHTML = '&times;';
+    hamburger.style.color = 'white';
   } else {
-    hamburger.innerHTML = '&#9776;'; // ☰
+    hamburger.innerHTML = '&#9776;';
+    hamburger.style.color = '';
   }
 });
 

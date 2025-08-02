@@ -4,64 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Kalfas Apartment</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      gap: 2rem;
-    }
-
-    .contact-info, .contact-map {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .contact-info h2 {
-      color: #2980b9;
-    }
-
-    .contact-info p {
-      line-height: 1.6;
-      margin-bottom: 0.8rem;
-    }
-
-    .maps-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 8px;
-    }
-    .logo img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-        padding: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-     <nav class="navbar">
+  <nav class="navbar">
   <ul>
     <li id ="selected"><a href="index.html">Home</a></li>
     <li><a href="kalfas-apartment-en.html">Kalfas Apartment</a></li>
@@ -80,20 +26,23 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
-  
-
-</nav>
+  </nav>
   <header>
-     <div class="logo-title">
-      <div class="logo">
-        <img src="logo/ChatGPT Image Jul 31, 2025, 10_11_53 PM.png" alt="Kalfas Logo">
-      </div>
-      <div>
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you!</p>
-      </div>
+    <div class="logo-title">
+      <h1>Contact Kalfas Apartments</h1>
     </div>
-  </header>
+    <p>Get in touch with us for bookings, inquiries, or more information</p>
+    <nav class="language-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('gr')">GR</button>
+    </nav>
+  </header> 
+
+  <div class="container-main">
+    <div class="slides">
+        <img src="logo/ChatGPT Image Jul 31, 2025, 10_11_53 PM.png" alt="Kalfas Apartments Logo" />
+    </div>
+  
 
 
   <div class="contact-container">
@@ -126,11 +75,12 @@
       ></iframe>
     </div>
   </div>
+  </div>
 
   <footer>
     &copy; 2025 Kalfas Apartments. All rights reserved. | <a href="mailto:kalfas1234@hotmail.com">Email Us</a>
   </footer>
-   <script src="css/script.js"></script>
+  <script src="css/script.js"></script>
 </body>
 
 </html>
